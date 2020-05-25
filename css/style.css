@@ -487,13 +487,10 @@ footer p {
   margin: 10px 0;
 }
 
-@media only screen and (max-width: 628px) {
+@media only screen and (max-width: 645px) {
   .brand {
     left: 25px;
     top: 20px;
-  }
-  .footer-social-links {
-    display: none;
   }
   .img {
     display: none;
@@ -513,26 +510,36 @@ footer p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100vh;
-  }
-  section .container .home h1 {
-    font-size: 2rem;
+    height: 90vh;
   }
   section .container .home div {
-    margin: 0;
+    display: inline;
   }
   section .container .home div a {
     margin: 0;
     margin-top: 1rem;
-  }
-  footer {
-    display: none;
+    margin-right: 1rem;
   }
 }
 
 @media only screen and (max-width: 942px) {
   section {
     padding: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  section .container {
+    height: 100vh;
+  }
+  section .container .home h1 {
+    font-size: 2rem;
+  }
+  section .container .home div a {
+    margin-right: 0;
+  }
+  footer {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
