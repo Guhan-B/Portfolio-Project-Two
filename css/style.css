@@ -145,7 +145,15 @@ nav ul li:hover {
     cursor: pointer;
   }
   nav {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: #2a2a2a;
     position: fixed;
     z-index: 9;
@@ -153,10 +161,7 @@ nav ul li:hover {
     right: 0;
     height: 100%;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    padding: 5rem;
     overflow-y: auto;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
@@ -178,7 +183,6 @@ nav ul li:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
   }
   nav.show ul.main li {
     -webkit-transform: translateX(0px);

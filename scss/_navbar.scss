@@ -73,7 +73,9 @@ nav {
         }
     }
     nav {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $gray;
         position: fixed;
         z-index: 9;
@@ -82,7 +84,7 @@ nav {
         height: 100%;
         width: 100%;
         display: flex;
-        padding: 5rem;
+        // padding: 5rem;
         overflow-y: auto;
         @include transform(translateX(100%));
         @include transition(transform .55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
@@ -91,7 +93,6 @@ nav {
             ul.main {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
                 li {
                     @include transform(translateX(0px));
                     opacity: 1;
