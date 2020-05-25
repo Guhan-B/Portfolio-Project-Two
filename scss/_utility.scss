@@ -1,0 +1,19 @@
+.btn {
+    text-decoration: none;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    color: white;
+    background-color: $primary-color;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+        color: $black;
+    }
+}
