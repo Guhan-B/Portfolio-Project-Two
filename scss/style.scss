@@ -2,6 +2,10 @@
 @import "./reset";
 @import "./_navbar";
 @import "./utility";
+.hint--top {
+    font-family: $lato;
+}
+
 .brand {
     display: flex;
     align-items: center;
@@ -19,6 +23,41 @@
     }
 }
 
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    8% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    32% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    34% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+}
+
+section .container .home .skills span:nth-child(1) {
+    animation-delay: 0;
+}
+
+section .container .home .skills span:nth-child(2) {
+    animation-delay: 2s;
+}
+
+section .container .home .skills span:nth-child(3) {
+    animation-delay: 4s;
+}
+
 section {
     width: 100vw;
     padding: 0 10rem;
@@ -32,10 +71,22 @@ section {
             h1 {
                 font-size: $font-xlg;
                 letter-spacing: 1px;
-                span {
+                .name {
                     color: $primary-color;
                 }
                 user-select: none;
+            }
+            .skills {
+                position: relative;
+                span {
+                    position: absolute;
+                    top: 0;
+                    opacity: 0;
+                    transform: translateY(-60px);
+                    overflow: hidden;
+                    pointer-events: none;
+                    animation: animate 6s infinite;
+                }
             }
             div {
                 margin: 2rem 0;
@@ -47,7 +98,7 @@ section {
         }
         .img {
             img {
-                width: 40vw;
+                width: 38vw;
                 user-select: none;
             }
         }
@@ -64,7 +115,7 @@ section {
         transition: color 0.2s ease-in-out;
         margin: 0 1.5rem;
         &:hover {
-            color: lighten($black, 30);
+            color: lighten($black, 20);
         }
     }
 }
@@ -103,6 +154,7 @@ footer {
             justify-content: center;
             height: 90vh;
             .home {
+                padding: 1rem 0;
                 div {
                     display: inline;
                     a {
@@ -124,6 +176,7 @@ footer {
 
 @media only screen and (max-width:460px) {
     section {
+        padding: 0;
         .container {
             height: 100vh;
             .home {
